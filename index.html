@@ -11,28 +11,48 @@
     <h1>Smart Event Dashboard</h1>
 
     <div class="top-section">
+      <div class="card dom-card">
+  <h2>DOM Manipulation Demo</h2>
+
+  <div class="dom-box">
+    <p>Press any key on your keyboard</p>
+
+    <div class="key-display">
+      <div class="key">
+        <span>Key</span>
+        <h3 id="pressedKey">-</h3>
+      </div>
+
+      <div class="key">
+        <span>Key Code</span>
+        <h3 id="keyCode">-</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <div class="card">
         <h2>Add New Event</h2>
 
         <form id="eventForm">
-          <label>Event Title:</label>
-          <input type="text" id="title" required>
+          <label>Event Title</label>
+          <input type="text" id="title" placeholder="Enter event title" required>
 
-          <label>Event Date:</label>
+          <label>Event Date</label>
           <input type="date" id="date" required>
 
-          <label>Category:</label>
-          <select id="category">
-            <option>Select</option>
+          <label>Category</label>
+          <select id="category" required>
+            <option value="">Select category</option>
             <option>Conference</option>
             <option>Workshop</option>
             <option>Meeting</option>
             <option>Seminar</option>
           </select>
 
-          <label>Description:</label>
-          <textarea id="description"></textarea>
+          <label>Description</label>
+          <textarea id="description" placeholder="Short description"></textarea>
 
           <button type="submit">Add Event</button>
         </form>
@@ -42,8 +62,8 @@
         <h2>My Events</h2>
 
         <div class="buttons">
-          <button id="clearEvents">Clear All Events</button>
-          <button id="sampleEvents">Add Sample Events</button>
+          <button id="clearEvents" class="danger">Clear All</button>
+          <button id="sampleEvents" class="secondary">Sample Events</button>
         </div>
 
         <div id="eventList">
@@ -52,9 +72,6 @@
       </div>
 
     </div>
-
-
-
   </div>
 
   <script src="script_1.js"></script>
