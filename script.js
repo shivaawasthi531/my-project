@@ -3,6 +3,21 @@ const eventList = document.getElementById("eventList");
 const clearBtn = document.getElementById("clearEvents");
 const sampleBtn = document.getElementById("sampleEvents");
 const demoBox = document.getElementById("demoBox");
+const pressedKey = document.getElementById("pressedKey");
+const keyCode = document.getElementById("keyCode");
+const domBox = document.querySelector(".dom-box");
+
+document.addEventListener("keydown", e => {
+  pressedKey.textContent = e.key;
+  keyCode.textContent = e.keyCode;
+
+  domBox.classList.add("dom-active");
+
+  setTimeout(() => {
+    domBox.classList.remove("dom-active");
+  }, 200);
+});
+
 
 let events = [];
 
